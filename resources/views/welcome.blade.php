@@ -1,98 +1,125 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.layoutsuma')
 
-        <title>Laravel</title>
+@section('menuservicios')
+    <li class="nav-item dropdown" >
+        <a href="#" class="nav-link text-primary dropdown-toggle" data-toggle="dropdown">{{__("Servicios")}}</a>
+        <div class="dropdown-menu">
+            <a href="{{ route( 'suma.servicios', '#queofrecemos-head-section')}}" class="dropdown-item">{{__("Qué ofrecemos")}}</a>
+            <a href="{{ route( 'suma.servicios', '#financiera-head-section')}}" class="dropdown-item">{{__("Área Financiera")}}</a>
+            <a href="{{ route( 'suma.servicios', '#contable-head-section')}}" class="dropdown-item">{{__("Área Contable")}}</a>
+            <a href="{{ route( 'suma.servicios', '#fiscal-head-section')}}" class="dropdown-item">{{__("Área Fiscal")}}</a>
+            <a href="{{ route( 'suma.servicios', '#mercantil-head-section')}} " class=" dropdown-item ">{{__("Área Mercantil")}}</a>
+            <a href="{{ route( 'suma.servicios', '#administracion-head-section') }} " class="dropdown-item ">{{__("Administración")}}</a>
+            <a href="{{ route( 'suma.servicios', '#consultoria-head-section') }} " class="dropdown-item ">{{__("Consultoría - RRHH")}}</a>
+            <a href="{{ route( 'suma.politica') }} " class="dropdown-item ">{{__("Politica de seguridad")}}</a>
+        </div>
+    </li>
+@endsection
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
+@section('home','active')
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+@section('carrusel')
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item carousel-image-1 active">
+            </div>
 
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
+            <div class="carousel-item carousel-image-2">
+                <div class="container d-flex">
+                    <div class="carousel-caption text-left mb-3">
+                        <h3 class="display-3"><span class="textoFondoTitulo">{{__("Contabilidad")}}</span></h3>
+                        <p class="lead d-none d-md-block"><span class="textoFondo">{{__("Mantenemos una imagen fiel y veraz del estado de tu negocio.")}}</span></p>
+                    </div>
                 </div>
-            @endif
+            </div>
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+            <div class="carousel-item carousel-image-3">
+                <div class="container">
+                    <div class="carousel-caption text-right mb-3">
+                        <h3 class="display-3"><span class="textoFondoTitulo">{{__("Fiscalidad")}}</span></h3>
+                        <p class="lead d-none d-md-block"><span class="textoFondo">{{__("Te asesoramos en los aspectos legales.")}}</span></p>
+                    </div>
                 </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+            </div>
+            <div class="carousel-item carousel-image-4">
+                <div class="container">
+                    <div class="carousel-caption-2 text-left mt-3">
+                        <h3 class="display-3"><span class="textoFondoTitulo">{{__("Administración")}}</span></h3>
+                        <p class="lead d-none d-md-block"><span class="textoFondo">{{__("Te ayudamos con tus tareas diarias para que te centres en tus objetivos.")}}</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item carousel-image-5">
+                <div class="container">
+                    <div class="carousel-caption-2 text-left mt-3">
+                        <h3 class="display-3"><span class="textoFondoTitulo">{{__("Consultoria")}}</span></h3>
+                        <p class="lead d-none d-md-block"><span class="textoFondo">{{__("Analizamos tus procesos en busca de la mejora.")}}</span></p>
+                    </div>
                 </div>
             </div>
         </div>
-    </body>
-</html>
+
+        <a href="#myCarousel" data-slide="prev" class="carousel-control-prev flechita">
+                <span class="carousel-control-prev-icon text-primary"></span>
+        </a>
+
+        <a href="#myCarousel" data-slide="next" class="carousel-control-next flechita">
+                <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+@endsection
+
+@if(App::getLocale()=='es')
+    @section('title','Suma - Bienvenido')
+    @section('content')
+        @include('partials.suma.es.ppalEs')    
+    @endsection
+@else
+    @section('title','Suma - Welcome')
+    @section('content')
+        @include('partials.suma.en.ppalEn')    
+    @endsection
+@endif
+
+@section('scriptsextra')
+    <script>
+        // Configure Slider
+        $('.carousel').carousel({
+        interval: 6000,
+        pause: 'hover'
+        });
+
+        // Init Scrollspy
+        $('body').scrollspy({ target: '#main-nav' });
+
+        // Smooth Scrolling
+        $("#main-nav a").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                const hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function () {
+                    window.location.hash = hash;
+                });
+            }
+        });
+
+        // Lightbox Init
+        $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+        });
+    </script> 
+
+
+    <script src="{{asset('/js/app.js')}}"></script>
+
+@endsection

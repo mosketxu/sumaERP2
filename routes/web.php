@@ -1,5 +1,9 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,39 +17,43 @@
 
 Route::get('/set_language/{lang}', 'Controller@setLanguage')->name('set_language');
 
-Auth::routes();
+Auth::routes([
+    'register' => false,
+]);
 
+// Auth::routes();
 Route::get('/', 'SumaController@index')->name('home');
-
-
 Route::get('/servicios', 'SumaController@servicios')->name('suma.servicios');
-Route::get('/equipo', 'SumaController@equipo')->name('suma.equipo');
+Route::get('/equipo', 'SumaController@equipo')->name('equipo');
 Route::get('/clientes', 'SumaController@clientes')->name('suma.clientes');
 Route::get('/contacto', 'SumaController@contacto')->name('suma.contacto');
 Route::get('/politica', 'SumaController@politica')->name('suma.politica');
 
 Route::group(['middleware' => ['auth'], 'prefix' => 'erp'], function () {
-    Route::get('/', 'EmpresaController@index')->name('empresas.index');
-
+    Route::get('/', 'ErpController@index')->name('erp.index');
+    Route::get('/admin','AdminController@index')->name('admin_dashboard')->middleware(['admin']);
     Route::group(['prefix' => 'empresas'], function () {
-        Route::get('/{slug}', 'EmpresaController@show')->name('empresas.show');
-        Route::get('/{slug}/edit', 'EmpresaController@edit')->name('empresas.edit');
-        Route::get('/{slug}/destroy', 'EmpresaController@destroy')->name('empresas.destroy');
+        require __DIR__ .'/empresas.php';
     });
 
-    Route::group(['prefix' => 'usuarios'], function () {
-        Route::get('/', 'UsuarioController@index')->name('usuarios.index');
-        Route::get('/{slug}', 'UsuarioController@show')->name('usuarios.show');
-        Route::get('/{slug}/edit', 'UsuarioController@edit')->name('usuarios.edit');
-        Route::get('/{slug}/destroy', 'UsuarioController@destroy')->name('usuarios.destroy');
-
+    Route::resource('user', 'UserController')->middleware('admin');
+    Route::get('profile', 'UserController@profile')->name('user.profile');
+    Route::post('profile', 'UserController@update_avatar')->name('user.updateavatar');
+    Route::group(['middleware' => ['admin'],'prefix' => 'userEmpresa'], function () {
+        require __DIR__ .'/empresasAsociadas.php';
     });
 
+    Route::resource('genero', 'GeneroController');
+    Route::get('generos', 'GeneroController@listing');
+
+    // pongo metodo any en lugar de fallback porque tambien acepta POST, DELETE y fallback() solo GET
+    Route::any('{any}', function () {
+        throw new NotFoundHttpException();
+    })->where('any','.*');
 });
 
-// Route::group(['prefix' => 'erp'], function () {
-// Route::get('erp', 'EmpresaController@index');
-// Route::get('erp/home', 'EmpresaController@index')->name('erp.home');
-// Route::get('erp/empresas', 'EmpresaController@show')->name('erp.empresas');
-    // Route::get('/empresa/{empresa}', 'EmpresaController@show')->name('erp.empresa');
+// Route::fallback(function() {
+//     throw new NotFoundHttpException();
+//     // return response()->view('welcome', [], 302);
 // });
+

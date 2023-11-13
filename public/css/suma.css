@@ -1,9 +1,16 @@
 /* GENERICO */
 
-.mb-10,
-.my-10 {
-    margin-bottom: 9rem !important;
+
+.mr-105,
+.mx-105 {
+    margin-right: 0 !important;
 }
+
+.ml-105,
+.mx-105 {
+    margin-left: 0 !important;
+}
+
 .display-5 {
     font-size: 2.5rem;
     font-weight: 400;
@@ -32,6 +39,11 @@
     font-size: 1rem;
     font-weight: 300;
     line-height: 1.1;
+}
+.display-sm1 {
+    font-size: 0.8rem;
+    font-weight: 100;
+    line-height: 0.8;
 }
 
 .flex-container {
@@ -81,6 +93,11 @@
     flex: 8;
 }
 
+
+.w-20 {
+    width: 20% !important;
+  }
+  
 /* NAV */
 .navbar {
     border-bottom: #3490dc 2px solid;
@@ -92,6 +109,14 @@
     padding-left: 1rem !important;
     padding-right: 1rem !important;
 }
+
+.navbar .nav-link-cap {
+    font-size: 11px;
+    text-transform: capitalize;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
 
 .navbar .nav-item.active {
     border-left: #3490dc 1px solid;
@@ -194,12 +219,13 @@
     background: url("../storage/img/LOGO_SUMA_1200x400.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 55%;
+    /* background-size: cover; */
+    background-size: 50%;
 }
 
 /* Contabilidad */
 .carousel-image-2 {
-    background: url("../storage/img/rawpixel-252130-unsplashRedim.jpg");
+    background: url("../storage/img/agenda.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-position-y: 50%;
@@ -220,7 +246,7 @@
 
 /* Fiscalidad */
 .carousel-image-3 {
-    background: url("../storage/img/apple-brainstorming-business-908288redim.jpg");
+    background: url("../storage/img/finance.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-position-y: 50%;
@@ -229,7 +255,7 @@
 
 /* Administracion */
 .carousel-image-4 {
-    background: url("../storage/img/estee-janssens-396887-unsplashRedim.jpg");
+    background: url("../storage/img/administracion.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-position-y: 50%;
@@ -238,7 +264,7 @@
 
 /* Consultoria */
 .carousel-image-5 {
-    background: url("../storage/img/rawpixel-570911-unsplashRedim.jpg");
+    background: url("../storage/img/consultoria.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-position-y: 50%;
@@ -265,7 +291,7 @@
 #consultoria-head-section {
     position: relative;
     min-height: 200px;
-    background: url("../storage/img/attach-2092_1920.jpg");
+    background: url("../storage/img/clips.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position-y: 80%;
@@ -277,7 +303,7 @@
 /* EQUIPO */
 #equipo-header {
     height: 450px;
-    background: url("../storage/img/rawpixel-653764-unsplashRedim.jpg");
+    background: url("../storage/img/equipo.jpg");
     background-size: cover;
     background-position-x: center;
     background-position-y: 50%;
@@ -319,7 +345,7 @@
 /* CLIENTES */
 #clientes-header {
     height: 450px;
-    background: url("../storage/img/rawpixel-974545-unsplashRedim.jpg");
+    background: url("../storage/img/clientes.jpg");
     background-size: cover;
     background-position-x: center;
     background-position-y: 50%;
@@ -338,7 +364,7 @@
 /* CONTACT */
 #contacto-header {
     height: 450px;
-    background: url("../storage/img/milkovi-444287-unsplashRedim.jpg");
+    background: url("../storage/img/masqueunservicio.jpg");
     background-size: cover;
     background-position-x: center;
     background-position-y: 80%;
@@ -348,7 +374,7 @@
 
 #contacto-section {
     height: 960px;
-    background: url("../storage/img/DSC_0943FondoRedim.jpg");
+    background: url("../storage/img/despacho.jpg");
     background-size: cover;
     background-position-x: center;
     background-position-y: 70%;
@@ -399,6 +425,55 @@
     border-radius: 50%;
     margin: 0 !important;
     padding: 0 !important;
+}
+.photoUsuarioCont {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: solid #3490dc;
+}
+
+/* Profile*/
+
+.wizard-card {
+    min-height: 210px;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15), 0 0 1px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 10px 0;
+}
+.wizard-card .picture-container {
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+}
+.wizard-card .picture {
+    width: 106px;
+    height: 106px;
+    background-color: #999999;
+    border: 4px solid #cccccc;
+    color: #ffffff;
+    border-radius: 50%;
+    margin: 5px auto;
+    overflow: hidden;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+}
+.wizard-card .picture:hover {
+    border-color: #3490dc;
+}
+.wizard-card .picture input[type="file"] {
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0 !important;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.wizard-card .picture-src {
+    width: 100%;
 }
 
 /* The given screen size or smaller */
@@ -454,7 +529,7 @@
 
     /* Contabilidad */
     .carousel-image-2 {
-        background: url("../storage/img/rawpixel-252130-unsplashRedim.jpg");
+        background: url("../storage/img/agenda.jpg");
         background-repeat: no-repeat;
         background-position: center;
         /* background-position-y: -400px; */

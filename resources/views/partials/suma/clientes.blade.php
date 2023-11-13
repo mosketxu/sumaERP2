@@ -1,15 +1,15 @@
-@extends('layouts.layoutsuma')
+@extends('layouts.suma')
 @section('clientes','active')
 
 @if(App::getLocale()=='es')
     @section('title','Suma - Clientes ')
     @section('content')
-        @include('partials.suma.es.clientesEs')    
+        @include('suma.es.clientesEs')    
     @endsection
 @else
     @section('title','Suma - Customers ')
     @section('content')
-        @include('partials.suma.en.clientesEn')    
+        @include('suma.en.clientesEn')    
     @endsection
 @endif
 
@@ -47,19 +47,19 @@
                 <img src="{{ asset('storage/img/clientes/inmobar.jpg')}}" alt="inmobar" class="fluid">
             </div>
             <div class="col-md-4 col-sm-6 p-5">
-                <img src="{{ asset('storage/img/clientes/InstitutCatalaCuina.jpg')}}" alt="InstitutCatalaCuina" class="fluid">
+                <img src="{{ asset('storage/img/clientes/alektum.png')}}" alt="Alektum" class="fluid">
             </div>
             <div class="col-md-4 col-sm-6 p-5">
                 <img src="{{ asset('storage/img/clientes/leve.jpg')}}" alt="leve" class="fluid">
             </div>
             <div class="col-md-4 col-sm-6 p-5">
-                <img src="{{ asset('storage/img/clientes/lewis.jpg')}}" alt="lewis" class="fluid">
+                <img src="{{ asset('storage/img/clientes/Logo-LC-cuadrado2.jpg')}}" alt="lewis" class="fluid">
             </div>
             <div class="col-md-4 col-sm-6 p-5">
                 <img src="{{ asset('storage/img/clientes/ltc.jpg')}}" alt="ltc" class="fluid">
             </div>
             <div class="col-md-4 col-sm-6 p-5">
-                <img src="{{ asset('storage/img/clientes/lullaby.jpg')}}" alt="lullaby" class="fluid">
+                <img src="{{ asset('storage/img/clientes/keyrock.jpg')}}" alt="keyrock" class="fluid">
             </div>
             <div class="col-md-4 col-sm-6 p-5">
                 <img src="{{ asset('storage/img/clientes/malamar.jpg')}}" alt="malamar" class="fluid">
@@ -90,4 +90,29 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('scriptsextra')
+    <script>
+        // Get the current year for the copyright
+        $('#year').text(new Date().getFullYear()); 
+        
+        // Botón subir
+        $(document).ready(function() {
+            // Show or hide the sticky footer button
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 200) {
+                    $('.go-top').fadeIn(200);
+                } else {
+                    $('.go-top').fadeOut(200);
+                }
+            });
+
+            // Animate the scroll to top
+            $('.go-top').click(function(event) {
+                event.preventDefault();
+                $('html, body').animate({scrollTop: 0}, 1200);
+            })
+        });
+    </script> 
 @endsection

@@ -1,4 +1,4 @@
-@extends('layouts.layoutsuma')
+@extends('layouts.suma')
 
 @section('piefijo','fixed-bottom mt-5 mb-3')
 @section('politica','active')
@@ -15,12 +15,36 @@
 @if(App::getLocale()=='es')
     @section('title','Suma - Politica Seguridad')
     @section('content')
-        @include('partials.suma.es.politicaEs')    
+        @include('suma.es.politicaEs')    
     @endsection
 @else
     @section('title','Suma - Private Policy')
     @section('content')
-        @include('partials.suma.en.politicaEn')    
+        @include('suma.en.politicaEn')    
     @endsection
 @endif
 
+@section('scriptsextra')
+    <script>
+        // Get the current year for the copyright
+        $('#year').text(new Date().getFullYear()); 
+        
+        // Botón subir
+        $(document).ready(function() {
+            // Show or hide the sticky footer button
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 200) {
+                    $('.go-top').fadeIn(200);
+                } else {
+                    $('.go-top').fadeOut(200);
+                }
+            });
+
+            // Animate the scroll to top
+            $('.go-top').click(function(event) {
+                event.preventDefault();
+                $('html, body').animate({scrollTop: 0}, 1200);
+            })
+        });
+    </script> 
+@endsection

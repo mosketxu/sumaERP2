@@ -201,21 +201,23 @@
                     <div class="tarjeta p-3">
                         <div class="tarjeta-title mt-3">
                             <img src="{{ asset('storage/img/clip_azul_150x150.jpg')}}" alt="Jordi Musumeci" class="img-fluid rounded-circle w-25 mb-3">
-                            <h3>Marta Aranda</h3>
+                            <h3>Sara Salom</h3>
                         </div>
                         <div class="tarjeta-subtitle">
-                            <h5 class="text-muted">Administrative technician.</h5>
+                            <h5 class="text-muted">Degree in administration and business management.  </h5>
                         </div>
                         <div class="tarjeta-body altotarjeta">
-                            <p class="text-muted m-0 p-0 mb-1">Accounting, Tax and Administration Specialist with more than 15 years of experience.</p>
+                            <p class="text-muted m-0 p-0 mb-1">10 years of experience in accounting, auditing and finance.</p>
+                            <p class="text-muted m-0 p-0 mb-1">Professional initiation in auditing at KPMG.</p>
+                            <p class="text-muted m-0 p-0 mb-1">Professional development as management controller in multinational companies.</p>
+                            <p class="text-muted m-0 p-0 mb-1">Freelance worker since 2020.</p>
                         </div>
                         <div class="tarjeta-footer">
-                            <a href="mailto:marta.aranda@sumaempresa.com" class="text-muted"><i class="fas fa-at fa-lg"></i> marta.aranda@sumaempresa.com</a>
+                            <a href="mailto:sara.salom@sumaempresa.com" class="text-muted"><i class="fas fa-at fa-lg"></i> sara.salom@sumaempresa.com</a>
                             <br>
-                            <span class="text-muted"><i class="fas fa-mobile-alt"></i> 620 95 10 52</span>
+                            {{-- <span class="text-muted"><i class="fas fa-mobile-alt"></i> 620 95 10 52</span> --}}
                         </div>
                     </div>
-                </div>
             </div>
 
         </div>

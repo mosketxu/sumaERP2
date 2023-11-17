@@ -202,18 +202,21 @@
                 <div class="tarjeta p-3">
                     <div class="tarjeta-title mt-3">
                         <img src="{{ asset('storage/img/clip_azul_150x150.jpg')}}" alt="Jordi Musumeci" class="img-fluid rounded-circle w-25 mb-3">
-                        <h3>Marta Aranda</h3>
+                        <h3>Sara Salom</h3>
                     </div>
                     <div class="tarjeta-subtitle">
-                        <h5 class="text-muted">Técnico Administrativa  </h5>
+                        <h5 class="text-muted">Licenciada en Administración y Dirección de Empresas.  </h5>
                     </div>
                     <div class="tarjeta-body altotarjeta">
-                        <p class="text-muted m-0 p-0 mb-1">Especialista Contable, Fiscal y Administración con más de 15 años de experiencia.</p>
+                        <p class="text-muted m-0 p-0 mb-1">20 años de experiencia en contabilidad y finanzas .</p>
+                        <p class="text-muted m-0 p-0 mb-1">Iniciación profesional en auditoría en KPMG .</p>
+                        <p class="text-muted m-0 p-0 mb-1"> Desarrollo profesional como controller de gestión en empresas multinacionales.</p>
+                        <p class="text-muted m-0 p-0 mb-1"> Profesional independiente desde el 2020.</p>
                     </div>
                     <div class="tarjeta-footer">
-                        <a href="mailto:marta.aranda@sumaempresa.com" class="text-muted"><i class="fas fa-at fa-lg"></i> marta.aranda@sumaempresa.com</a>
+                        <a href="mailto:sara.salom@sumaempresa.com" class="text-muted"><i class="fas fa-at fa-lg"></i> sara.salom@sumaempresa.com</a>
                         <br>
-                        <span class="text-muted"><i class="fas fa-mobile-alt"></i> 620 95 10 52</span>
+                        {{-- <span class="text-muted"><i class="fas fa-mobile-alt"></i> 620 95 10 52</span> --}}
                     </div>
                 </div>
             </div>

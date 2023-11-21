@@ -100,8 +100,8 @@
                         </div>
                         <div class="tarjeta-footer">
                             <a href="mailto:alex.arregui@sumaempresa.com" class="text-muted"><i class="fas fa-at fa-lg"></i> alex.arregui@sumaempresa.com</a>
-                            <br>
-                            <span class="text-muted"><i class="fas fa-mobile-alt"></i> 638 12 26 14</span>
+                            {{-- <br>
+                            <span class="text-muted"><i class="fas fa-mobile-alt"></i> 638 12 26 14</span> --}}
                         </div>
                     </div>
                 </div>
@@ -123,8 +123,8 @@
                         </div>
                         <div class="tarjeta-footer">
                             <a href="mailto:dolors.celdran@sumaempresa.com" class="text-muted"><i class="fas fa-at fa-lg"></i> dolors.celdran@sumaempresa.com</a>
-                            <br>
-                            <span class="text-muted"><i class="fas fa-mobile-alt"></i> 653 93 96 29</span>
+                            {{-- <br>
+                            <span class="text-muted"><i class="fas fa-mobile-alt"></i> 653 93 96 29</span> --}}
                         </div>
                     </div>
                 </div>
@@ -146,8 +146,8 @@
                         </div>
                         <div class="tarjeta-footer">
                             <a href="mailto:miriam.marin@sumaempresa.com" class="text-muted"><i class="fas fa-at fa-lg"></i> miriam.marin@sumaempresa.com</a>
-                            <br>
-                            <span class="text-muted"><i class="fas fa-mobile-alt"></i> 690 07 61 54</span>
+                            {{-- <br>
+                            <span class="text-muted"><i class="fas fa-mobile-alt"></i> 690 07 61 54</span> --}}
                         </div>
                     </div>
                 </div>
@@ -168,8 +168,8 @@
                         </div>
                         <div class="tarjeta-footer">
                             <a href="mailto:jordi.musumeci@sumaempresa.com" class="text-muted"><i class="fas fa-at fa-lg"></i> jordi.musumeci@sumaempresa.com</a>
-                            <br>
-                            <span class="text-muted"><i class="fas fa-mobile-alt"></i> 678 75 90 35</span>
+                            {{-- <br>
+                            <span class="text-muted"><i class="fas fa-mobile-alt"></i> 678 75 90 35</span> --}}
                         </div>
                     </div>
                 </div>
@@ -192,8 +192,8 @@
                         </div>
                         <div class="tarjeta-footer">
                             <a href="mailto:marta.carmona@sumaempresa.com" class="text-muted"><i class="fas fa-at fa-lg"></i> marta.carmona@sumaempresa.com</a>
-                            <br>
-                            <span class="text-muted"><i class="fas fa-mobile-alt"></i> 650 29 81 88</span>
+                            {{-- <br>
+                            <span class="text-muted"><i class="fas fa-mobile-alt"></i> 650 29 81 88</span> --}}
                         </div>
                     </div>
                 </div>
@@ -208,8 +208,8 @@
                         </div>
                         <div class="tarjeta-body altotarjeta">
                             <p class="text-muted m-0 p-0 mb-1">10 years of experience in accounting, auditing and finance.</p>
-                            <p class="text-muted m-0 p-0 mb-1">Professional initiation in auditing at KPMG.</p>
-                            <p class="text-muted m-0 p-0 mb-1">Professional development as management controller in multinational companies.</p>
+                            <p class="text-muted m-0 p-0 mb-1">Professional start in audit: KPMG.</p>
+                            <p class="text-muted m-0 p-0 mb-1">Professional development as controller in international companies.</p>
                             <p class="text-muted m-0 p-0 mb-1">Freelance worker since 2020.</p>
                         </div>
                         <div class="tarjeta-footer">

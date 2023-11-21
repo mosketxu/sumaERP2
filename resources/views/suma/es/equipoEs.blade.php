@@ -103,8 +103,8 @@
                         </div>
                         <div class="tarjeta-footer">
                             <a href="mailto:alex.arregui@sumaempresa.com" class="text-muted"><i class="fas fa-at fa-lg"></i> alex.arregui@sumaempresa.com</a>
-                            <br>
-                            <span class="text-muted"><i class="fas fa-mobile-alt"></i> 638 12 26 14</span>
+                            {{-- <br>
+                            <span class="text-muted"><i class="fas fa-mobile-alt"></i> 638 12 26 14</span> --}}
                         </div>
                     </div>
                 </div>
@@ -126,8 +126,8 @@
                         </div>
                         <div class="tarjeta-footer">
                             <a href="mailto:dolors.celdran@sumaempresa.com" class="text-muted"><i class="fas fa-at fa-lg"></i> dolors.celdran@sumaempresa.com</a>
-                            <br>
-                            <span class="text-muted"><i class="fas fa-mobile-alt"></i> 653 93 96 29</span>
+                            {{-- <br>
+                            <span class="text-muted"><i class="fas fa-mobile-alt"></i> 653 93 96 29</span> --}}
                         </div>
                     </div>
                 </div>
@@ -148,8 +148,8 @@
                         </div>
                         <div class="tarjeta-footer">
                             <a href="mailto:miriam.marin@sumaempresa.com" class="text-muted"><i class="fas fa-at fa-lg"></i> miriam.marin@sumaempresa.com</a>
-                            <br>
-                            <span class="text-muted"><i class="fas fa-mobile-alt"></i> 690 07 61 54</span>
+                            {{-- <br>
+                            <span class="text-muted"><i class="fas fa-mobile-alt"></i> 690 07 61 54</span> --}}
                         </div>
                     </div>
                 </div>
@@ -170,8 +170,8 @@
                         </div>
                         <div class="tarjeta-footer">
                             <a href="mailto:jordi.musumeci@sumaempresa.com" class="text-muted"><i class="fas fa-at fa-lg"></i> jordi.musumeci@sumaempresa.com</a>
-                            <br>
-                            <span class="text-muted"><i class="fas fa-mobile-alt"></i> 678 75 90 35</span>
+                            {{-- <br>
+                            <span class="text-muted"><i class="fas fa-mobile-alt"></i> 678 75 90 35</span> --}}
                         </div>
                     </div>
                 </div>
@@ -194,8 +194,8 @@
                         </div>
                         <div class="tarjeta-footer">
                             <a href="mailto:marta.carmona@sumaempresa.com" class="text-muted"><i class="fas fa-at fa-lg"></i> marta.carmona@sumaempresa.com</a>
-                            <br>
-                            <span class="text-muted"><i class="fas fa-mobile-alt"></i> 650 29 81 88</span>
+                            {{-- <br>
+                            <span class="text-muted"><i class="fas fa-mobile-alt"></i> 650 29 81 88</span> --}}
                         </div>
                     </div>
                 </div>
@@ -216,7 +216,7 @@
                         </div>
                         <div class="tarjeta-footer">
                             <a href="mailto:sara.salom@sumaempresa.com" class="text-muted"><i class="fas fa-at fa-lg"></i> sara.salom@sumaempresa.com</a>
-                            <br>
+                            {{-- <br> --}}
                             {{-- <span class="text-muted"><i class="fas fa-mobile-alt"></i> 620 95 10 52</span> --}}
                         </div>
                     </div>
